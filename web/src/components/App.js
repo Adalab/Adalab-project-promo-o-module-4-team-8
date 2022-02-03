@@ -30,10 +30,7 @@ function App() {
       github: '',
     })
   );
-<<<<<<< HEAD
   
-=======
->>>>>>> ef55016e6e1c965b9a13ff4e9d1aefc9795394b3
   useEffect(() => {
     ls.set('lsData', data);
   }, [data]);
