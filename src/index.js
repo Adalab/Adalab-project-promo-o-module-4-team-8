@@ -4,6 +4,7 @@
 const express = require('express');
 const cors = require('cors');
 
+
 // Creamos el servidor
 const server = express();
 
@@ -24,18 +25,24 @@ server.post('/card', (req, res) => {
   const remote_server = 'https://awesome-profile-cards.herokuapp.com/card';
  // const error = "error en la descripción" 
 
+  
   const responseSuccess = {
     "success": true,
     "cardUrl": remote_server,
   };
 
-//   const responseError = {
-//     "success": false,
-//     "cardUrl": error,
-//   };
+  const responseError = {
+    "success": false,
+    "cardUrl": error,
+   };
 
+    if (req.body.name !== '' && req.body.job !== '' && req.body.email !== '' && req.body.linkedin !== '' && req.body.github !== '') {
+      res.json(responseSuccess)
+    } else  {
+      
+      res.json(responseError)
 
-  res.json(responseSuccess);
+    }
 });
 
 //servidor de estátivos
