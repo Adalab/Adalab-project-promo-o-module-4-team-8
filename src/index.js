@@ -9,8 +9,8 @@ const server = express();
 
 // Configuramos el servidor
 server.use(cors());
-server.use(express.json());
-server.use(express.json({limit: '18mb'}))
+//server.use(express.json());
+server.use(express.json({limit: '10mb'}))
 
 // Arrancamos el servidor en el puerto 3000
 const serverPort = 4000;
