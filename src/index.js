@@ -37,3 +37,7 @@ server.post('/card', (req, res) => {
 
   res.json(responseSuccess);
 });
+
+//servidor de estátivos
+const staticServerPath = './src/public-react';
+server.use(express.static(staticServerPath));

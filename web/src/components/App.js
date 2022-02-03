@@ -30,7 +30,7 @@ function App() {
       github: '',
     })
   );
-console.log(data.photo);
+  
   useEffect(() => {
     ls.set('lsData', data);
   }, [data]);
