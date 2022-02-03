@@ -30,7 +30,6 @@ function App() {
       github: '',
     })
   );
-console.log(data.photo);
   useEffect(() => {
     ls.set('lsData', data);
   }, [data]);
@@ -63,9 +62,11 @@ console.log(data.photo);
   const handleSharebtn = (ev) => {
     ev.preventDefault();
     CallToApi(data).then((dataCard) => {
+      console.log(dataCard);
       setDataCard(dataCard.cardURL);
     });
   };
+
 
   return (
     <div className="page">
