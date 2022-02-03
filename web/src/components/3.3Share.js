@@ -1,4 +1,6 @@
+
 const Share = (props) => {
+  
   return (
     <fieldset className={`share ${props.open ? '' : 'collapsed'}`}>
       <legend
@@ -28,11 +30,18 @@ const Share = (props) => {
           <i className="far fa-address-card share__button--icon"></i>
           <span>Crear tarjeta</span>
         </button>
+<<<<<<< HEAD
         <div className={`share__paragraph js_share_twitter ${
               props.dataCard === '' ? 'hidden' : ''
             }`}>
           <h3>La tarjeta ha sido creada:</h3>
          <a
+=======
+       
+        <div className="share__paragraph js_share_twitter >
+          <h3>La tarjeta ha sido creada:</h3>
+          <a
+>>>>>>> ef55016e6e1c965b9a13ff4e9d1aefc9795394b3
            href={props.dataCard}
           className="share__paragraph--text js-url"
           target="_blank"
@@ -51,8 +60,10 @@ const Share = (props) => {
               <i className="fab fa-twitter share__paragraph--icon"></i>
             </a>
           </div>
+       
         </div>
       </div>
+
     </fieldset>
   );
 };
