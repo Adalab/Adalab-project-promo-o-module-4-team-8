@@ -5,6 +5,7 @@ const express = require('express');
 const cors = require('cors');
 
 
+
 // Creamos el servidor
 const server = express();
 
@@ -12,6 +13,10 @@ const server = express();
 server.use(cors());
 //server.use(express.json());
 server.use(express.json({limit: '10mb'}))
+
+// para el motor de plantillas
+server.set('view engine', 'ejs');
+
 
 // Arrancamos el servidor en el puerto 3000
 const serverPort = 4000;
@@ -48,3 +53,15 @@ server.post('/card', (req, res) => {
 //servidor de estátivos
 const staticServerPath = './src/public-react';
 server.use(express.static(staticServerPath));
+
+// servidor dinamico
+
+server.get('/card/:cardId', (req, res) => { 
+
+ const paramCard = req.params.cardId;
+ // para buscar la info (falta hacerlo)
+
+//  res.render("card",  buscar lo que falta )
+ 
+
+ });
