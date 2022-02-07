@@ -6,6 +6,9 @@ import Header from './Header';
 import Preview from './Preview';
 import Footer from './Footer';
 import WhiteSection from './3WhiteSection';
+import { Route, Switch } from "react-router-dom";
+import Landing from './Landing';
+
 
 function App() {
   const [dataCard, setDataCard] = useState('');
@@ -30,7 +33,7 @@ function App() {
       github: '',
     })
   );
-  
+
   useEffect(() => {
     ls.set('lsData', data);
   }, [data]);
@@ -71,20 +74,27 @@ function App() {
 
   return (
     <div className="page">
-      <Header />
-      <main>
-        <form className="maincontainer" action="#" method="post">
-          <Preview data={data} handleResetBtn={handleResetBtn} />
-          <WhiteSection
-            data={data}
-            handleInput={handleInput}
-            handleSharebtn={handleSharebtn}
-            dataCard={dataCard}
-            cardLink={cardLink}
-            updateAvatar={updateAvatar}
-          />
-        </form>
-      </main>
+      <Switch>
+        <main>
+          <Route path="/" exact >
+            <Landing />
+          </Route>
+          <Route path="/card" exact>
+            <Header />
+            <form className="maincontainer" action="#" method="post">
+              <Preview data={data} handleResetBtn={handleResetBtn} />
+              <WhiteSection
+                data={data}
+                handleInput={handleInput}
+                handleSharebtn={handleSharebtn}
+                dataCard={dataCard}
+                cardLink={cardLink}
+                updateAvatar={updateAvatar}
+              />
+            </form>
+          </Route>
+        </main>
+      </Switch>
       <Footer />
     </div>
   );
