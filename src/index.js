@@ -4,6 +4,11 @@
 const express = require('express');
 const cors = require('cors');
 
+//Base de datos
+const Database = require("better-sqlite3");
+const db = new Database("./src/data/cards.db", { verbose: console.log });
+
+
 //importamos uuid
 const { v4: uuidv4 } = require('uuid');
 const req = require('express/lib/request');
@@ -26,34 +31,47 @@ server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
 
-const savedCards = [];
+
 
 // Escribimos los endpoints que queramos
 server.post('/card', (req, res) => {
   if (req.body.name !== '' && req.body.job !== '' && req.body.email !== '' && req.body.linkedin !== '' && req.body.github !== '') {
+
     const newCardData = {
       ...req.body,
       id: uuidv4()
     }
-    savedCards.push(newCardData)
+    const local_host = `http://localhost:4000/card/${newCardData.id}`;
+    // const error = "error en la descripción" 
+    // console.log(newCardData);
+    const insertData = db.prepare(`INSERT INTO cards(uuid, palette, name, job,phone,email,linkedin,github, photo ) 
+    VALUES (?,?,?,?,?,?,?,?,?)`
+    )
+    insertData.run(
+      newCardData.id,
+      newCardData.palette,
+      newCardData.name,
+      newCardData.job,
+      newCardData.phone,
+      newCardData.email,
+      newCardData.linkedin,
+      newCardData.github,
+      newCardData.photo
+    )
+    const responseSuccess = {
+      "success": true,
+      "cardURL": local_host,
+    };
+
     res.json(responseSuccess)
   } else {
+    const responseError = {
+      "success": false,
+      "cardURL": error,
+    };
     res.json(responseError)
   }
 
-  const local_host = `http://localhost:4000/card/${newCardData.id}`;
-  // const error = "error en la descripción" 
-  console.log(newCardData);
-
-  const responseSuccess = {
-    "success": true,
-    "cardUrl": local_host,
-  };
-
-  const responseError = {
-    "success": false,
-    "cardUrl": error,
-  };
 });
 
 //servidor de estátivos
@@ -66,8 +84,12 @@ server.get('/card/:cardId', (req, res) => {
 
   const paramCard = req.params.cardId;
   // para buscar la info (falta hacerlo)
-
-  //  res.render("card",  buscar lo que falta )
-
-
+  console.log(paramCard);
+  const query = db.prepare(
+    `SELECT *
+    FROM cards
+    WHERE uuid = ?
+    `);
+  const userCard = query.get(paramCard);
+  res.render("card", userCard);
 });
