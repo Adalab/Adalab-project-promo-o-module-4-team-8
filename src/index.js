@@ -10,7 +10,6 @@ const db = new Database('./src/data/cards.db', { verbose: console.log });
 
 //importamos uuid
 const { v4: uuidv4 } = require('uuid');
-const req = require('express/lib/request');
 
 // Creamos el servidor
 const server = express();
@@ -43,8 +42,6 @@ server.post('/card', (req, res) => {
       id: uuidv4(),
     };
     const local_host = `http://localhost:4000/card/${newCardData.id}`;
-    // const error = "error en la descripción"
-    // console.log(newCardData);
     const insertData =
       db.prepare(`INSERT INTO cards(uuid, palette, name, job,phone,email,linkedin,github, photo ) 
     VALUES (?,?,?,?,?,?,?,?,?)`);
@@ -68,7 +65,7 @@ server.post('/card', (req, res) => {
   } else {
     const responseError = {
       success: false,
-      cardURL: error,
+      cardURL: 'error',
     };
     res.json(responseError);
   }
