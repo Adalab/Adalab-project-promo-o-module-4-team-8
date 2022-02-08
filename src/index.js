@@ -81,8 +81,7 @@ server.use(express.static(staticServerPathStyle));
 
 server.get('/card/:cardId', (req, res) => {
   const paramCard = req.params.cardId;
-  // para buscar la info (falta hacerlo)
-  console.log(paramCard);
+  // console.log(paramCard);
   const query = db.prepare(
     `SELECT *
     FROM cards
