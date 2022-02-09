@@ -39,6 +39,10 @@
       color: $colorText;
       margin-right: 8px;
     }
+    &:hover {
+      background-color: #d9e6ea;
+      transition: background-color ease 0.2s;
+    }
   }
 
   &__article {
@@ -125,6 +129,9 @@
           height: 32px;
           border-radius: 50%;
           padding: 5px;
+          &:hover {
+            transform: scale(1.05);
+          }
         }
 
         & .palette1 {

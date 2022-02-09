@@ -13,7 +13,7 @@ const Share = (props) => {
         <a>
           <i
             className={`fas fa-chevron-down js-arrow ${
-              props.open ? '' : 'rotate'
+              props.open ? 'rotate' : ''
             }`}
           ></i>
         </a>
