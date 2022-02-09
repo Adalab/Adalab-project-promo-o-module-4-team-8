@@ -7,17 +7,15 @@ En este proyecto se nos ha facilitado un proyecto realizado por otras compañera
 
 ## Componentes: 
 
-- [Mireia_Suero] (https://github.com/mireiasuefra)
+- Mireia Suero 👉🏼 https://github.com/mireiasuefra
 
-- [Rocio_Dols] (https://github.com/RocioDols)
+- Rocio Dols 👉🏼 https://github.com/RocioDols
 
-- [Paula_delaVictoria] (https://github.com/pauladelavictoria)
+- Paula de la Victoria 👉🏼 https://github.com/pauladelavictoria
 
-- [Paula_delaVictoria] (https://github.com/pauladelavictoria)
+- Noelia PH 👉🏼 https://github.com/NoeliaPH
 
-- [Noelia_PH] (https://github.com/NoeliaPH)
-
-- [Ico_Lizhen] (https://github.com/icoliz)
+- Ico Lizhen 👉🏼 https://github.com/icoliz
 
 
 
