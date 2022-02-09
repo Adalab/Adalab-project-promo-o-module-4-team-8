@@ -19,7 +19,7 @@ const Fill = (props) => {
         </div>
         <i
           className={`fas fa-chevron-down fill__anunc--arrow js-arrow ${
-            props.open ? '' : 'rotate'
+            props.open ? 'rotate' : ''
           }`}
         ></i>
       </legend>

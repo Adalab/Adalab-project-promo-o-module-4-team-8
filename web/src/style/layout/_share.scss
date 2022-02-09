@@ -60,6 +60,10 @@
       font-weight: 600;
       text-transform: uppercase;
       margin-bottom: 30px;
+      &:hover {
+        transform: scale(1.05);
+        transition: transform ease-in-out 0.2s;
+      }
     }
 
     &--icon {
@@ -93,6 +97,10 @@
       border-radius: 3px;
       box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
       font-size: 14px;
+      &:hover {
+        transform: scale(1.05);
+        transition: transform ease-in-out 0.2s;
+      }
     }
 
     &--twLink {

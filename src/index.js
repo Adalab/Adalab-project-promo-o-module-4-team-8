@@ -33,6 +33,7 @@ server.post('/card', (req, res) => {
   if (
     req.body.name !== '' &&
     req.body.job !== '' &&
+    req.body.photo !== '' &&
     req.body.email !== '' &&
     req.body.linkedin !== '' &&
     req.body.github !== ''

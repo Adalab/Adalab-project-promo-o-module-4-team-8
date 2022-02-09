@@ -70,12 +70,14 @@ function App() {
   return (
     <div className="page">
       <Switch>
-        <main>
-          <Route path="/" exact>
+        <Route path="/" exact>
+          <main>
             <Landing />
-          </Route>
-          <Route path="/card" exact>
-            <Header />
+          </main>
+        </Route>
+        <Route path="/card" exact>
+          <Header />
+          <main>
             <form className="maincontainer" action="#" method="post">
               <Preview data={data} handleResetBtn={handleResetBtn} />
               <WhiteSection
@@ -86,8 +88,8 @@ function App() {
                 updateAvatar={updateAvatar}
               />
             </form>
-          </Route>
-        </main>
+          </main>
+        </Route>
       </Switch>
       <Footer />
     </div>

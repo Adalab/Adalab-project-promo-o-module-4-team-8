@@ -19,7 +19,7 @@ const Design = (props) => {
         </div>
         <i
           className={`fas fa-chevron-down design__legend--arrow js-arrow ${
-            props.open ? '' : 'rotate'
+            props.open ? 'rotate' : ''
           }`}
         ></i>
       </legend>
