@@ -20,7 +20,7 @@ En este proyecto se nos ha facilitado un proyecto realizado por otras compañera
 
 [Kanban de nuestro proyecto](https://github.com/Adalab/Adalab-project-promo-o-module-4-team-8/projects/1)
 
-## React
+## React :rocket:
 
 Estudiamos el proyecto heredado, lo analizamos e hicimos los ajustes necesarios para adaptarlo a React:
 
@@ -32,7 +32,7 @@ Estudiamos el proyecto heredado, lo analizamos e hicimos los ajustes necesarios 
 - [x] Realizamos una petición al servidor para publicar nuestra tarjeta e incluimos la funcionalidad de compartir en Twitter.
 - [x] Utilizamos `Router` para cargar nuestra landing.
 
-## Node JS
+## Node JS :computer:
 
 Tras finalizar nuestra aplicación en React, creamos un servidor para poder personalizar su respuesta:
 
