@@ -1,7 +1,8 @@
-# Proyecto modulo 3 y 4: Truthy && the Booleans
+# Proyecto módulo 3 y 4: Truthy && the Booleans
 
 
 Proyecto realizado para el tercer y cuarto módulo del bootcamp de Adala.
+
 En este proyecto se nos ha facilitado un proyecto realizado por otras compañeras, lo hemos pasado a React y hemos desarrollado nuestro primer servidor web.
 
 
