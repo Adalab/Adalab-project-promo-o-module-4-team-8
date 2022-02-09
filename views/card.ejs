@@ -1,47 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../Preview.css" />
+    <title>Awesome Profile Cards</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
+  <body>
     <section class="blueSection">
-        <!-- <button class="blueSection__reset js_reset" type="reset" value="reset"><i
-                class="blueSection__reset--icon far fa-trash-alt"></i>Reset
-        </button> -->
-        <article class="blueSection__article">
-            <div class="blueSection__article--group">
-                <div class="rectangle js_rectangle <%=palette%>"></div>
-                <h2 class="title js_preview_title <%=palette%>">
-                    <%=name%>
-                </h2>
-                <h5 class="subtitle js_preview_subtitle">
-                    <%=job%>
-                </h5>
-            </div>
-            <div class="blueSection__article--photo js__profile-image"></div>
-            <ul class="blueSection__article--containerList">
-                <li class="item"><a href="<%=phone%>" class="js-phoneIcon"><i
-                            class="icon fas fa-mobile-alt  js_icon <%=palette%>"></i></a>
-                </li>
-                <li class="item"> <a href="
-                        mailto:<%=email%>?Subject=Interesado%20en%20contactar%20contigo" class="js-envelope "
-                        target="_blank"><i class="icon far fa-envelope js_icon <%=palette%>"></i></a>
-                </li>
-                <li class="item"> <a href="<%=linkedin%>" class="js-linkedinIcon " target="_blank"><i
-                            class="icon fab fa-linkedin-in js_icon <%=palette%>"></i></a>
-                </li>
-                <li class="item"> <a href="<%=github%>" class="js-githubIcon " target="_blank"><i
-                            class="icon fab fa-github-alt js_icon <%=palette%>"></i></a></li>
-
-                            
-            </ul>
-        </article>
+      <article class="blueSection__article">
+        <div class="blueSection__article--group">
+          <div class="rectangle js_rectangle <%=palette%>"></div>
+          <h2 class="title js_preview_title <%=palette%>"><%=name%></h2>
+          <h5 class="subtitle js_preview_subtitle"><%=job%></h5>
+        </div>
+        <div
+          class="blueSection__article--photo js__profile-image"
+          style="background-image: url(<%=photo%>)"
+        ></div>
+        <ul class="blueSection__article--containerList">
+          <li class="item">
+            <a href="<%=phone%>" class="js-phoneIcon"
+              ><i class="icon fas fa-mobile-alt js_icon <%=palette%>"></i
+            ></a>
+          </li>
+          <li class="item">
+            <a
+              href="mailto:<%=email%>?Subject=Interesado%20en%20contactar%20contigo"
+              class="js-envelope"
+              target="_blank"
+              ><i class="icon far fa-envelope js_icon <%=palette%>"></i
+            ></a>
+          </li>
+          <li class="item">
+            <a href="<%=linkedin%>" class="js-linkedinIcon" target="_blank"
+              ><i class="icon fab fa-linkedin-in js_icon <%=palette%>"></i
+            ></a>
+          </li>
+          <li class="item">
+            <a href="<%=github%>" class="js-githubIcon" target="_blank"
+              ><i class="icon fab fa-github-alt js_icon <%=palette%>"></i
+            ></a>
+          </li>
+        </ul>
+      </article>
     </section>
-</body>
-
+  </body>
 </html>

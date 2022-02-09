@@ -36,7 +36,6 @@ const WhiteSection = (props) => {
         handleCollapseFn={handleCollapse}
         handleSharebtn={props.handleSharebtn}
         dataCard={props.dataCard}
-        cardLink={props.cardLink}
       />
     </section>
   );

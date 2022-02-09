@@ -6,9 +6,8 @@ import Header from './Header';
 import Preview from './Preview';
 import Footer from './Footer';
 import WhiteSection from './3WhiteSection';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch } from 'react-router-dom';
 import Landing from './Landing';
-
 
 function App() {
   const [dataCard, setDataCard] = useState('');
@@ -38,8 +37,6 @@ function App() {
     ls.set('lsData', data);
   }, [data]);
 
-  const [cardLink, setCardLink] = useState('hidden');
-
   // Componente imagen
   const updateAvatar = (avatar) => {
     setData({
@@ -66,17 +63,15 @@ function App() {
   const handleSharebtn = (ev) => {
     ev.preventDefault();
     CallToApi(data).then((dataCard) => {
-      console.log(dataCard);
       setDataCard(dataCard.cardURL);
     });
   };
-
 
   return (
     <div className="page">
       <Switch>
         <main>
-          <Route path="/" exact >
+          <Route path="/" exact>
             <Landing />
           </Route>
           <Route path="/card" exact>
@@ -88,7 +83,6 @@ function App() {
                 handleInput={handleInput}
                 handleSharebtn={handleSharebtn}
                 dataCard={dataCard}
-                cardLink={cardLink}
                 updateAvatar={updateAvatar}
               />
             </form>

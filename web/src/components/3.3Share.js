@@ -1,6 +1,4 @@
-
 const Share = (props) => {
-  
   return (
     <fieldset className={`share ${props.open ? '' : 'collapsed'}`}>
       <legend
@@ -24,27 +22,44 @@ const Share = (props) => {
         <p className="share__button--message js_error_message hidden"></p>
 
         <button
-          className="share__button--item js_btn_share gray"
+          className={`share__button--item js_btn_share ${
+            props.dataCard === '' ? 'orange' : 'gray'
+          }`}
           onClick={props.handleSharebtn}
         >
           <i className="far fa-address-card share__button--icon"></i>
           <span>Crear tarjeta</span>
         </button>
-        <div className={`share__paragraph js_share_twitter ${
-              props.dataCard === '' ? 'hidden' : ''
-            }`}>
-          <h3>La tarjeta ha sido creada:</h3>
-         <a
-           href={props.dataCard}
-          className="share__paragraph--text js-url"
-          target="_blank"
-          rel="noreferrer"
+        <div
+          className={`share__paragraph js_share_twitter ${
+            props.dataCard === '' ? 'hidden' : ''
+          }`}
         >
-          Este es el enlace a tu tarjeta: {props.dataCard}
-        </a> 
-          <div className="share__paragraph--twButton">
+          <h3>
+            {props.dataCard !== 'error'
+              ? 'La tarjeta ha sido creada:'
+              : 'Ha habido un problema'}
+          </h3>
+          <a
+            href={props.dataCard}
+            className="share__paragraph--text js-url"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {props.dataCard !== 'error'
+              ? `Este es el enlace a tu tarjeta: ${props.dataCard}`
+              : `Por favor, rellene todos los campos`}
+          </a>
+          <div
+            className={`share__paragraph--twButton ${
+              props.dataCard === 'error' ? 'hidden' : null
+            }`}
+          >
             <a
-              href="https://twitter.com/intent/tweet?text=Os%20comparto%20mi%20tarjeta%20de%20presentaci%C3%B3n%20hecha%20a%20trav%C3%A9s%20de%20la%20app%20web%20%22Awesome%20Profile%20Cards%22%20%20%23HTML%20%23CSS%20%23JS%20%20%23Adalab%20%23WomenInTech"
+              href={
+                'https://twitter.com/intent/tweet?text=Os%20comparto%20mi%20tarjeta%20de%20presentaci%C3%B3n%20hecha%20a%20trav%C3%A9s%20de%20la%20app%20web%20%22Awesome%20Profile%20Cards%22%20%20%23HTML%20%23CSS%20%23JS%20%20%23Adalab%20%23WomenInTech%20' +
+                props.dataCard
+              }
               target="_blank"
               className="share__paragraph--twLink js_tw_button"
               rel="noreferrer"
@@ -53,10 +68,8 @@ const Share = (props) => {
               <i className="fab fa-twitter share__paragraph--icon"></i>
             </a>
           </div>
-       
         </div>
       </div>
-
     </fieldset>
   );
 };
