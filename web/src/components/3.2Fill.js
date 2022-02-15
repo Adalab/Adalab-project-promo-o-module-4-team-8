@@ -25,7 +25,7 @@ const Fill = (props) => {
       </legend>
       <section className="fill__form js_fill_content">
         <label htmlFor="name" className="fill__form--required">
-          Nombre completo
+          Nombre completo *
         </label>
         <input
           onChange={handleInput}
@@ -39,7 +39,7 @@ const Fill = (props) => {
         />
 
         <label htmlFor="job" className="fill__form--required">
-          Puesto
+          Puesto *
         </label>
 
         <input
@@ -60,7 +60,7 @@ const Fill = (props) => {
         <Profile avatar={props.data.photo} />
 
         <label htmlFor="email" className="fill__form--required">
-          Email
+          Email *
         </label>
 
         <input
@@ -90,7 +90,7 @@ const Fill = (props) => {
         />
 
         <label htmlFor="linkedin" className="fill__form--required">
-          LinkedIn
+          LinkedIn *
         </label>
 
         <input
@@ -104,7 +104,7 @@ const Fill = (props) => {
         />
 
         <label htmlFor="github" className="fill__form--required">
-          Github
+          Github *
         </label>
         <input
           onChange={handleInput}
@@ -115,6 +115,10 @@ const Fill = (props) => {
           name="github"
           value={props.data.github}
         />
+
+        <p className="fill__form--required">
+          Los campos marcados con * son obligatorios
+        </p>
       </section>
     </fieldset>
   );

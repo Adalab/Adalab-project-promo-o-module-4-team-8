@@ -1,5 +1,5 @@
 import CardPreviewIcons from './CardPreviewIcons';
-import defaultAvatar from '../images/user_image.png';
+import defaultAvatar from '../images/placeholder.png';
 import '../style/Preview.scss';
 
 function CardPreview(props) {

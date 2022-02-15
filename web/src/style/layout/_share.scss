@@ -13,7 +13,7 @@
     width: 100%;
     margin-bottom: 10px;
     &:hover {
-      color: #e17334;
+      color: $colorMain;
     }
 
     &--wrapper {
@@ -122,7 +122,7 @@
   display: none;
 }
 .gray {
-  background-color: gray;
+  background-color: $colorButton;
 }
 .orange {
   background-color: $colorMain;

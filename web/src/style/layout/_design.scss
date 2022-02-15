@@ -12,7 +12,7 @@
     width: 100%;
     padding-bottom: 10px;
     &:hover {
-      color: #e17334;
+      color: $colorMain;
     }
 
     &--wrapper {
@@ -64,13 +64,13 @@
 
   &__second {
     &--firstColor {
-      background-color: #420101;
+      background-color: #7a02df;
     }
     &--secondColor {
-      background-color: #bd1010;
+      background-color: #F2055C;
     }
     &--thirdColor {
-      background-color: #e95626;
+      background-color: #02e0ad;
     }
   }
 
