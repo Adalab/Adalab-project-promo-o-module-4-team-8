@@ -14,7 +14,7 @@ const Design = (props) => {
         className={`design__legend js_collapsable_title_design js_title_list`}
       >
         <div className="design__legend--wrapper">
-          <i className="far fa-object-ungroup design__legend--icon"></i>
+          <i className="fas fa-palette design__legend--icon"></i>
           <h2 className="design__legend--title">Diseña</h2>
         </div>
         <i

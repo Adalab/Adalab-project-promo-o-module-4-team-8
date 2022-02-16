@@ -21,20 +21,20 @@
   color: #b8b8b9;
   text-transform: none;
   object-fit: contain;
+  margin-top: 15px;
   @media all and(min-width:768px) {
+    margin-top: 0;
     margin-left: 41px;
     line-height: 20px;
   }
 }
 .logoFooter {
-  width: 103px;
-  height: 40px;
+  width: 70px;
   object-fit: contain;
   margin: 5px;
   @media all and(min-width:768px) {
     margin-right: 40px;
-    width: 103px;
-    height: 40px;
+    width: 70px;
     margin-top: 10px;
   }
 }

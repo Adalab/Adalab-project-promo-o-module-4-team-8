@@ -14,7 +14,7 @@ const Fill = (props) => {
         className="fill__anunc js_collapsable_title_fill js_title_list"
       >
         <div className="fill__anunc--wrapper">
-          <i className=" far fa-keyboard fill__anunc--wrapper--icon"></i>
+          <i className="fas fa-fill-drip fill__anunc--wrapper--icon"></i>
           <h2 className="fill__anunc--wrapper--h2">Rellena</h2>
         </div>
         <i

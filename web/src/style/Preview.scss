@@ -1,8 +1,10 @@
 @import 'core/variables';
 
-
 .blueSection {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
     url('../images/backPreview.png');
   width: 100vw;
   height: 457px;
@@ -26,10 +28,10 @@
   &__reset {
     width: 75px;
     height: 30px;
-    border: 1px solid white;
+    border: 1px solid #541c94;
     border-radius: 15px;
-    background-color:$colorButton;
-    color: $colorText;
+    background-color: $colorButton;
+    color: #541c94;
     font-family: $fontMain;
     font-size: 12px;
     line-height: 1.67;
@@ -40,12 +42,17 @@
       grid-row: 2 / 3;
     }
     &--icon {
-      color: $colorText;
+      color: #541c94;
       margin-right: 8px;
     }
     &:hover {
-      background-color: #04B2D9;
+      background-color: #04b2d9;
+      color: white;
+      border: 1px solid white;
       transition: background-color ease 0.2s;
+      .blueSection__reset--icon {
+        color: white;
+      }
     }
   }
 
@@ -75,7 +82,7 @@
           background-color: #438792;
         }
         &.palette2 {
-          background-color: #F2055C;
+          background-color: #f2055c;
         }
         &.palette3 {
           background-color: #eab052;
@@ -86,7 +93,7 @@
         font-size: 18px;
         font-weight: bold;
         line-height: 20px;
-  margin-bottom: 15px;
+        margin-bottom: 15px;
         text-transform: capitalize;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
