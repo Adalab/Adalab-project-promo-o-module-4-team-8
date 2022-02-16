@@ -92,3 +92,4 @@ server.get('/card/:cardId', (req, res) => {
   const userCard = query.get(paramCard);
   res.render('card', userCard);
 });
+// holaaa
