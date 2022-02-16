@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultAvatar from '../images/user_image.png';
+import defaultAvatar from '../images/placeholder.png';
 
 function GetAvatar(props) {
   const fr = new FileReader();

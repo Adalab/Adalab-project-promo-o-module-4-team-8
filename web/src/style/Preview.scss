@@ -1,11 +1,15 @@
 @import 'core/variables';
 
+
 .blueSection {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url('../images/backPreview.png');
   width: 100vw;
   height: 457px;
-  background: linear-gradient(to bottom, #bfcdd0, #dde9ed);
   padding-top: 38px;
   padding-bottom: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
   grid-template-columns: 1fr 45px 240px 35px 1fr;
   grid-template-rows: 30px 329px;
@@ -24,7 +28,7 @@
     height: 30px;
     border: 1px solid white;
     border-radius: 15px;
-    background-color: #bfcdd000;
+    background-color:$colorButton;
     color: $colorText;
     font-family: $fontMain;
     font-size: 12px;
@@ -40,7 +44,7 @@
       margin-right: 8px;
     }
     &:hover {
-      background-color: #d9e6ea;
+      background-color: #04B2D9;
       transition: background-color ease 0.2s;
     }
   }
@@ -71,7 +75,7 @@
           background-color: #438792;
         }
         &.palette2 {
-          background-color: #bd1010;
+          background-color: #F2055C;
         }
         &.palette3 {
           background-color: #eab052;
@@ -81,7 +85,8 @@
         font-family: $fontCard;
         font-size: 18px;
         font-weight: bold;
-        line-height: 1.11;
+        line-height: 20px;
+  margin-bottom: 15px;
         text-transform: capitalize;
         grid-column: 2 / 3;
         grid-row: 1 / 2;
@@ -89,7 +94,7 @@
           color: #114e4e;
         }
         &.palette2 {
-          color: #420101;
+          color: #7a02df;
         }
         &.palette3 {
           color: #3e5b65;
@@ -109,7 +114,7 @@
     &--photo {
       width: 240px;
       height: 200px;
-      background-image: url(../images/user_image.png);
+      background-image: url(../images/placeholder.png);
       background-size: cover;
       background-position: center center;
       margin-top: 10px;
@@ -139,8 +144,8 @@
           border: 2px solid #a2deaf;
         }
         & .palette2 {
-          color: #420101;
-          border: 2px solid #e95626;
+          color: #7a02df;
+          border: 2px solid #02e0ad;
         }
         & .palette3 {
           color: #3e5b65;

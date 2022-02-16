@@ -66,7 +66,7 @@
   border: none;
   width: 129px;
   height: 42px;
-  background-color: #438792;
+  background-color: $colorButton;
   text-transform: uppercase;
   color: #ffffff;
   font-size: 16px;
@@ -74,6 +74,6 @@
   margin: 38px 75px 0 65px;
   padding: 10px 20px;
   &:hover {
-    background-color: #e17334;
+    background-color: #04B2D9;
   }
 }
