@@ -89,7 +89,7 @@ a {
   background-color: #438792;
 }
 .blueSection__article--group .rectangle.palette2 {
-  background-color: #bd1010;
+  background-color: #f2055c;
 }
 .blueSection__article--group .rectangle.palette3 {
   background-color: #eab052;
@@ -107,7 +107,7 @@ a {
   color: #114e4e;
 }
 .blueSection__article--group .title.palette2 {
-  color: #420101;
+  color: #7a02df;
 }
 .blueSection__article--group .title.palette3 {
   color: #3e5b65;
@@ -152,8 +152,8 @@ a {
   border: 2px solid #a2deaf;
 }
 .blueSection__article--containerList .item .palette2 {
-  color: #420101;
-  border: 2px solid #e95626;
+  color: #7a02df;
+  border: 2px solid #02e0ad;
 }
 .blueSection__article--containerList .item .palette3 {
   color: #3e5b65;
