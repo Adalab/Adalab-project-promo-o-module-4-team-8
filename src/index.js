@@ -42,7 +42,7 @@ server.post('/card', (req, res) => {
       ...req.body,
       id: uuidv4(),
     };
-    const local_host = `http://localhost:${serverPort}/card/${newCardData.id}`;
+    // const local_host = `http://localhost:${serverPort}/card/${newCardData.id}`;
     const insertData =
       db.prepare(`INSERT INTO cards(uuid, palette, name, job,phone,email,linkedin,github, photo ) 
     VALUES (?,?,?,?,?,?,?,?,?)`);
@@ -59,7 +59,10 @@ server.post('/card', (req, res) => {
     );
     const responseSuccess = {
       success: true,
-      cardURL: local_host,
+      cardURL:
+        process.env.NODE_ENV === 'production'
+          ? `https://awesomecards.herokuapp.com/card/${newCardData.id}`
+          : `http://localhost:4000/card/${newCardData.id}`,
     };
 
     res.json(responseSuccess);
