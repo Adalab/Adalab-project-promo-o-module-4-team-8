@@ -23,7 +23,7 @@ server.use(express.json({ limit: '10mb' }));
 server.set('view engine', 'ejs');
 
 // Arrancamos el servidor en el puerto 3000
-const serverPort = 4000;
+const serverPort = process.env.PORT || 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
@@ -42,7 +42,7 @@ server.post('/card', (req, res) => {
       ...req.body,
       id: uuidv4(),
     };
-    const local_host = `http://localhost:4000/card/${newCardData.id}`;
+    const local_host = `http://localhost:${serverPort}/card/${newCardData.id}`;
     const insertData =
       db.prepare(`INSERT INTO cards(uuid, palette, name, job,phone,email,linkedin,github, photo ) 
     VALUES (?,?,?,?,?,?,?,?,?)`);
